@@ -13,6 +13,8 @@ namespace ToDoList.Service
         IEnumerable<Note> GetAll();
         Note GetByID(int id);
         void Create(Note note);
+        void Update(Note note);
         void DeleteByID(int id);
+        void ToggleComplete(int id);
     }
 }

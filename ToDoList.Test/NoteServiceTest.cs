@@ -72,7 +72,7 @@ namespace ToDoList.Test
             try
             {
                 //Arrange
-                var newNote = new Note { id = 1, Name = "New Note - Yesterday", StartDate = DateTime.Now.AddDays(-1) };
+                var newNote = new Note(1) { Name = "New Note - Yesterday", StartDate = DateTime.Now.AddDays(-1) };
 
                 //Act
                 _noteService.Create(newNote);
@@ -82,6 +82,34 @@ namespace ToDoList.Test
             {
                 Assert.Fail("Expected no exception, but got: " + ex.Message);
             }
+        }
+
+        [TestMethod]
+        public void NoteService_NewNote_Defaults_ToAllDay()
+        {
+            //Arrange
+            var newNote = new Note(1) { Name = "New Note - Yesterday", StartDate = DateTime.Now.AddDays(-1) };
+            var expected = true;
+
+            //Act
+            var actual = newNote.AllDay;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void NoteService_NewNote_Defaults_StartDate_To_Today()
+        {
+            //Arrange
+            var newNote = new Note(1) { Name = "New Note - Yesterday"};
+            var expected = DateTime.Now;
+
+            //Act
+            var actual = newNote.StartDate;
+
+            //Assert
+            Assert.AreEqual(expected, actual);
         }
 
     }

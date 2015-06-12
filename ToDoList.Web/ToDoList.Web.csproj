@@ -198,6 +198,7 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\HtmlExtensions.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NoteController.cs" />
@@ -321,6 +322,16 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Note\Index.cshtml" />
     <Content Include="Views\Note\Create.cshtml" />
+    <Content Include="Views\Shared\_LayoutSite.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Answer.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Checkbox.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Email.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Number.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Telephone.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\Text.cshtml" />
+    <Content Include="Views\Note\Edit.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTimeDropDown.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

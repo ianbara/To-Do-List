@@ -35,8 +35,29 @@ namespace ToDoList.Web.Controllers
         {
             _noteService.Create(note);
 
-            return View();
+            return RedirectToAction("Index");
 
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var note = _noteService.GetByID(id);
+
+            return View(note);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(Note note)
+        {
+            _noteService.Update(note);
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult ToggleComplete(int id)
+        {
+            _noteService.ToggleComplete(id);
+            return RedirectToAction("Index");
         }
 
     }

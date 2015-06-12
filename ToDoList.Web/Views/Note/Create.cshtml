@@ -6,66 +6,88 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Note</legend>
+                <fieldset>
+                    <legend>Note</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.SortOrder)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.SortOrder)
-            @Html.ValidationMessageFor(model => model.SortOrder)
-        </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Name)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                    
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Reference)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Reference)
+                        @Html.ValidationMessageFor(model => model.Reference)
+                    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Name)
-            @Html.ValidationMessageFor(model => model.Name)
-        </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.StartDate)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.StartDate, "DateTimeDropDown")
+                        @Html.ValidationMessageFor(model => model.StartDate)
+                    </div>
+                    
+                    
+                    <div style="display:none;">
+                        <div class="editor-label">
+                            @Html.LabelFor(model => model.EndDate)
+                        </div>
+                        <div class="editor-field">
+                            @Html.EditorFor(model => model.EndDate)
+                            @Html.ValidationMessageFor(model => model.EndDate)
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Details)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Details)
+                        @Html.ValidationMessageFor(model => model.Details)
+                    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.StartDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.StartDate)
-            @Html.ValidationMessageFor(model => model.StartDate)
-        </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.AllDay)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.AllDay)
+                        @Html.ValidationMessageFor(model => model.AllDay)
+                    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.EndDate)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.EndDate)
-            @Html.ValidationMessageFor(model => model.EndDate)
-        </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.Completed)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.Completed)
+                        @Html.ValidationMessageFor(model => model.Completed)
+                    </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.AllDay)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.AllDay)
-            @Html.ValidationMessageFor(model => model.AllDay)
-        </div>
+                    <p>
+                        <input type="submit" value="Create" />
+                    </p>
+                </fieldset>
+            }
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Completed)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Completed)
-            @Html.ValidationMessageFor(model => model.Completed)
-        </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
-}
+        </div>
+    </div>
+</div>
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")

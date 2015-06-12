@@ -37,7 +37,7 @@ namespace ToDoList.Service
         {
             try
             {
-                return _Note.GetAll().Where(s => s.id == id).SingleOrDefault();
+                return _Note.GetAll().Where(s => s.Id == id).SingleOrDefault();
             }
             catch (Exception ex)
             {
@@ -51,17 +51,39 @@ namespace ToDoList.Service
             _uow.Save();
         }
 
+        public void Update(Note note)
+        {
+            _Note.Update(note);
+            _uow.Save();
+        }
+
         public void DeleteByID(int id)
         {
             try
             {
-                Note model = _Note.GetAll().Where(s => s.id == id).SingleOrDefault();
+                Note model = _Note.GetAll().Where(s => s.Id == id).SingleOrDefault();
                 _Note.Delete(model);
                 _uow.Save();
             }
             catch (Exception ex)
             {
                 throw new Exception("Failure deleting note", ex);
+            }
+        }
+
+
+        public void ToggleComplete(int id)
+        {
+            try
+            {
+                Note model = _Note.GetAll().Where(s => s.Id == id).SingleOrDefault();
+                model.Completed = !model.Completed;
+                _Note.Update(model);
+                _uow.Save();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failure completing note", ex);
             }
         }
     }
