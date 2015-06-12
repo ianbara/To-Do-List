@@ -1,0 +1,324 @@
+﻿@import "_constants.less";
+@import "_mixins.less";
+
+legend {
+    font-family: @generalFontFamily;
+    margin: 0 0 1em 0;
+}
+
+label,
+.label {
+    cursor: pointer;
+    display: block;
+    float: none;
+    width: auto;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form h1,
+form h2,
+form h3,
+form h4,
+form h5,
+form h6,
+form p {
+    clear: both;
+}
+
+form p,
+form p.box,
+form > div,
+form > fieldset > div {
+    margin-bottom: 2em;
+}
+
+form p:after,
+form label:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid #b9b9b9;
+    .border-radius(21px);
+    padding: 8px 15px;
+    font-family: $generalFontFamily;
+    color: @standardFontColour;
+    font-size: 1em;
+    .box-sizing(border-box);
+    width: 100%;
+
+    &[disabled], &[readonly] {
+        background-color: #ddd;
+    }
+}
+.banner .highlight-box input,
+.banner .highlight-box textarea,
+.banner .highlight-box select {
+    border: 1px solid #b9b9b9;
+}
+select {
+    padding: 8px 0 8px 15px;
+}
+
+.banner input,  
+.banner textarea,
+.banner select {
+    border-color: @inverseFontColor;
+}
+
+select,
+.banner .highlight-box select {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+input:focus,
+input:active,
+.banner .highlight-box input:focus,
+.banner .highlight-box input:active,
+textarea:focus,
+textarea:active,
+.banner .highlight-box textarea:focus,
+.banner .highlight-box textarea:active,
+select:focus,
+select:active,
+.banner .highlight-box select:focus,
+.banner .highlight-box select:active {
+    border-color: @titleColor;
+    outline: 0;
+    .box-shadow(0 0 4px 0 rgba(216,64,0,.3));
+}
+
+.banner input:focus,
+.banner textarea:focus,
+.banner select:focus {
+    border-color: #111;
+}
+
+textarea {
+    padding: 12px 19px;
+    width: 100%;
+}
+
+textarea.medium {
+    width: 67%;
+}
+
+textarea.small {
+    width: 24em;
+    font-size: 100%;
+}
+
+.checkbox,
+.radio {
+    display: inline-block;
+}
+
+.checkbox input[type=checkbox],
+.radio input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    z-index: 1001;
+    width: 44px;
+    height: 44px;
+}
+
+.checkbox .check,
+.radio .check {
+    border: 1px solid #aaa;
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    .border-radius(21px);
+    z-index: 1000;
+}
+
+.banner .checkbox .check,
+.banner .radio .check {
+    border-color: @inverseFontColor;
+}
+
+.banner .highlight-box .checkbox .check,
+.tertiary-banner .checkbox .check,
+.banner .highlight-box .radio .check,
+.tertiary-banner .radio .check {
+    border-color: #777;
+}
+
+.checkbox input[type=checkbox]:focus + .check,
+.checkbox input[type=checkbox]:active + .check,
+.banner .highlight-box .checkbox input[type=checkbox]:focus + .check,
+.banner .highlight-box .checkbox input[type=checkbox]:active + .check,
+.radio input[type=radio]:focus + .check,
+.radio input[type=radio]:active + .check,
+.banner .highlight-box .radio input[type=radio]:focus + .check,
+.banner .highlight-box .radio input[type=radio]:active + .check {
+    border-color: @titleColor;
+    .box-shadow(0 0 4px 0 rgba(216,64,0,.3));
+}
+
+.banner .checkbox input[type=checkbox]:focus + .check,
+.banner .radio input[type=radio]:focus + .check {
+    border-color: #111;
+}
+
+.checkbox input[type=checkbox]:checked + .check,
+.radio input[type=radio]:checked + .check,
+.checkbox .check.checked,
+.radio .check.checked {
+    background-image: url("../content/images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -182px -1px;
+}
+
+.checkbox .text,
+.radio .text {
+    padding-left: 50px;
+    padding-top: 12px;
+    float: left;
+}
+
+label.checkbox,
+label.radio {
+    height: 43px;
+}
+
+label.radio {
+    width: 45%;
+}
+
+.button {
+    .box-sizing(border-box);
+    .border-radius(1em);
+    text-decoration: none;
+    padding: 0.3em 0.9em;
+    font-family: $generalFontFamily;
+    font-size: 1em;
+    background: none;
+    border: 1px solid #fff;
+    color: #555;
+    cursor: pointer;
+}
+.banner .highlight-box .button {
+    color: #555;
+}
+.banner .button,
+.banner .highlight-box .primary-button,
+.banner .highlight-box .secondary-button {
+    color: #fff,
+}
+.button-row {
+    text-align: center;
+}
+.button-row .primary-button {
+    /*font-size: 150%;*/
+    font-size: 20px;
+    min-width: 250px;
+    font-weight: bold;
+
+}
+
+.banner .button {
+    border-color: transparent;
+}
+
+.tertiary-banner .button {
+    color: @standardFontColour;
+}
+
+.secondary-banner .button,
+.tertiary-banner .primary-button,
+.tertiary-banner .secondary-button {
+    color: @inverseFontColor;
+}
+
+.button:hover,
+.button:focus {
+    text-decoration: none;
+    outline: none;
+    border-color: #555;
+}
+
+.banner .button:hover,
+.banner .button:focus {
+    border-color: #111;
+}
+
+.primary-button {
+    background: @primaryButtonLight;
+    color: @inverseFontColor;
+}
+.primary-button:focus,
+.primary-button:hover {
+    background: @primaryButtonDark;
+}
+
+.button.gradient {
+    .gradient(@primaryButtonLight, @primaryButtonDark);
+    color: #fff;
+}
+
+.primary-button.gradient:focus,
+.primary-button.gradient:hover {
+    .gradient(@primaryButtonLightFocus, @primaryButtonDark);
+}
+
+
+.secondary-button {
+    background: @secondaryButtonLight;
+    color: @inverseFontColor;
+}
+
+.secondary-button:focus,
+.secondary-button:hover {
+    background: @secondaryButtonDark;
+}
+
+.secondary-button.gradient {
+    .gradient(@secondaryButtonLight, @secondaryButtonDark);
+}
+
+.field-validation-error {
+    color: @validationErrorColour;
+}
+
+.input-validation-error {
+    border-color: @validationErrorColour;
+}
+
+.input-validation-ok {
+    border-color: @primaryButtonLight;
+}
+
+.tooltip {
+    clear: both;
+    display: block;
+    margin-left: 33%;
+}
+.js .tooltip {
+    display: none;
+}
+label .tooltip-icon {
+    float: right;
+    margin-left: 10px;
+    margin-top: -5px;
+}
+
+
+.dateDropDown {
+    div {
+        display: inline-block;
+    }
+}
+
+
+@import "elements/pills.less";

@@ -1,0 +1,75 @@
+﻿@model ToDoList.Data.Note
+
+@{
+}
+<h2>Edit</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <fieldset>
+                <legend>Note</legend>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Reference)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Reference)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.SortOrder)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.SortOrder)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Name)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Details)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Details)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.StartDate)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.StartDate)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.EndDate)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.EndDate)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.AllDay)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.AllDay)
+                </div>
+
+                <div class="display-label">
+                    @Html.DisplayNameFor(model => model.Completed)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.Completed)
+                </div>
+            </fieldset>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+                @Html.ActionLink("Back to List", "Index")
+            </p>
+        </div>
+    </div>
+</div>

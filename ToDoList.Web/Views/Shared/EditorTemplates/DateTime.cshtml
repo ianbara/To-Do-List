@@ -1,0 +1,63 @@
+﻿@using System.Threading
+@using ToDoList.Web.Common
+
+@model Nullable<System.DateTime> 
+
+@{
+    bool isRequired = ViewBag.IsRequired != null && (bool)ViewBag.IsRequired;
+    string prefix = ViewData.TemplateInfo.HtmlFieldPrefix;
+}
+
+@if (isRequired)
+{
+    @Html.TextBox(string.Empty, null,
+    new { @data_val="true", @data_val_daterequired="The date is not valid", 
+            @data_val_daterequired_dayfield=prefix+"_Day", 
+            @data_val_daterequired_monthfield=prefix+"_Month", 
+            @data_val_daterequired_yearfield=prefix+"_Year",
+            @style ="width: 0;height: 0;position: absolute;z-index: -99;" })
+}
+
+            <div data-pro-module="Select" data-track-prop="eVar17" class="customSelect">
+                @Html.DropDownList("Day", new SelectList(Enumerable.Range(1, 31)), "-- Day --", 
+                    isRequired ? new { @data_val="true", @data_val_required="The Day field is required." } : null)
+                <div class="valueRegion">
+                    <span></span>
+                    <span class="arrow"></span>
+                </div>
+            </div>
+
+            <div data-pro-module="Select" data-track-prop="eVar17" class="customSelect">
+                @Html.DropDownList("Month", Enumerable.Range(1, 12).Select(i => new SelectListItem                          
+                    {                              
+                        Value = i.ToString(),                              
+                        Text = Thread.CurrentThread.CurrentUICulture.DateTimeFormat.GetMonthName(i)       
+                    }), "-- Month --", 
+                    isRequired ? new { @data_val="true", @data_val_required="The Month field is required." } : null)
+                <div class="valueRegion">
+                    <span></span>
+                    <span class="arrow"></span>
+                </div>
+            </div>
+
+            <div data-pro-module="Select" data-track-prop="eVar17" class="customSelect">
+                @Html.DropDownList("Year", new SelectList(Enumerable.Range(DateTime.Now.Year-75, 76)), "-- Year --",
+                    isRequired ? new { @data_val="true", @data_val_required="The Year field is required." } : null)
+                <div class="valueRegion">
+                    <span></span>
+                    <span class="arrow"></span>
+                </div>
+            </div>
+
+@Html.Section(
+@<script type='text/javascript'>
+     $(document).ready(function () {
+         var prefix = '@ViewData.TemplateInfo.HtmlFieldPrefix';
+         var element = $("[id^='@ViewData.TemplateInfo.HtmlFieldPrefix']");
+
+         element.change(function () {
+             $('#' + prefix).valid();
+             $(this).valid();
+         });
+     });
+</script>, "scripts")

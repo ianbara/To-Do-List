@@ -1,0 +1,38 @@
+﻿@import "../_mixins.less";
+@import "../_constants.less";
+
+
+.pills {
+	overflow: auto;
+	text-align: center;
+}
+.pill {
+	display: inline-block;
+    .box-sizing(border-box);
+	cursor: pointer;
+	color: #666;
+	font-weight: bold;
+    .box-shadow(inset -3px -3px 9px #ddd);
+	border: 1px solid #ccc;
+	padding: 9px 33px;
+    float: none;
+    margin-right: -5px;
+    text-align: center;
+}
+.pill input {
+    width: auto;
+}
+.pill:last-child {
+	margin-right: 0;
+}
+.pill.selected {
+	background-color: @primaryBannerDarkColour;
+	color: #fff;
+    .box-shadow(inset 0 0 10px #666);
+}
+.pill:first-child {
+    .border-radius(20px 0 0 20px);
+}
+.pill:last-child {
+    .border-radius(0 20px 20px 0);
+}

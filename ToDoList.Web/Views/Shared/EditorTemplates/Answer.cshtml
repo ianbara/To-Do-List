@@ -1,0 +1,32 @@
+﻿@model Pfg.Websites.ProvidentOnline.ViewModels.Answer
+
+<div class="radio">
+	<label>
+		@if (Model == Pfg.Websites.ProvidentOnline.ViewModels.Answer.Yes)
+		{
+		    @Html.RadioButtonFor(x => x, (int)Pfg.Websites.ProvidentOnline.ViewModels.Answer.Yes, new { @checked = "checked" });
+		}
+		else
+		{
+		    @Html.RadioButtonFor(x => x, (int)Pfg.Websites.ProvidentOnline.ViewModels.Answer.Yes);
+		}
+        <span class="check"></span>
+        <span class="text">Yes</span>
+	</label>
+</div>
+
+<div class="radio">
+	<label>
+		@if (Model == Pfg.Websites.ProvidentOnline.ViewModels.Answer.No)
+		{
+		    @Html.RadioButtonFor(x => x, (int)Pfg.Websites.ProvidentOnline.ViewModels.Answer.No, new { @checked = "checked" });
+		}
+		else
+		{
+		    @Html.RadioButtonFor(x => x, (int)Pfg.Websites.ProvidentOnline.ViewModels.Answer.No);
+		}
+        <span class="check"></span>
+        <span class="text">No</span>
+	</label>
+</div>
+

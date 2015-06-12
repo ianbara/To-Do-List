@@ -1,0 +1,112 @@
+﻿@import '_constants.less';
+
+html { 
+    font-size: 100%;
+}
+body {
+    font-family: 'Raleway',@fontFallback;
+	color: @standardFontColour;
+	text-align: left;
+	line-height: 1.4em;
+}
+a {
+	color: @titleColor;
+	text-decoration: none;
+}
+a.plain {
+	color: @standardFontColour;
+}
+.banner,
+.banner a {
+    color: @inverseFontColor;
+}
+.secondary-banner {
+    color: @standardFontColour;
+}
+.secondary-banner a {
+    color: @titleColor;
+}
+.tertiary-banner {
+    color: @standardFontColour;
+}
+.inverse-banner {
+    color: @inverseFontColor;
+}
+a:focus,
+a:hover {
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+    padding: 0.5em 0;
+    line-height: 1.2em;
+    margin: 0;
+}
+h1, h2, h3 {
+	color: @titleColor;
+	font-family: @generalFontFamily;
+}
+.banner h1,
+.banner h2,
+.banner h3 {
+	padding: 0 0 0.2em 0;
+    margin: 0 0 0.2em 0;
+	line-height: 1.2em;
+    color: #fff;
+}
+.secondary-banner h1,
+.secondary-banner h2,
+.secondary-banner h3,
+.tertiary-banner h1,
+.tertiary-banner h2,
+.tertiary-banner h3 {
+    color: @standardFontColour;
+}
+h1 {
+    font-size: 2.4em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.8em;
+	padding: 0;
+	margin: 0.5em 0;
+}
+h4 {
+    font-size: 1.6em;
+}
+h5 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+h6 {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.banner .highlight-box h2 {
+    color: @titleColor;
+    font-size: 1.2em;
+}
+ul.plain {
+    margin-left: 0;
+    list-style: none;
+}
+
+/* Breakpoint 4 */
+@media (min-width: 890px) {
+  ul.inline, ol.inline {
+    margin-left: 0; }
+
+  ul.inline li, ol.inline li {
+    display: inline;
+    margin-right: 1em; }
+
+  ul.inline li:last-child, ol.inline li:last-child {
+    margin-right: 0; }
+
+  ul.inline label, ol.inline label {
+    width: auto; }
+
+  .banner h1 {
+    font-size: 2.8em; }
+ }

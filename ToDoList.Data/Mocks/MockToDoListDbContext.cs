@@ -14,23 +14,20 @@ namespace ToDoList.Data.Infrastructure
             {
                 return new List<Note>
         {
-            new Note
+            new Note(1)
             {
-                id = 1,
                 SortOrder = 1,
                 Name = "Make a Brew",
                 StartDate = DateTime.Now
             },
-            new Note
+            new Note(2)
             {
-                id = 2,
                 SortOrder = 1,
                 Name = "Note Appears Tomorrow",
                 StartDate = DateTime.Now.AddDays(1)
             },
-            new Note
+            new Note(3)
             {
-                id = 3,
                 SortOrder = 2,
                 Name = "Merge some code",
                 StartDate = DateTime.Now.AddDays(1)

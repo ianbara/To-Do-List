@@ -1,0 +1,94 @@
+﻿@using System.Threading
+@using ToDoList.Web.Common
+@model  Nullable<System.DateTime> 
+
+@{
+    bool isRequired = ViewBag.IsRequired != null && (bool)ViewBag.IsRequired;
+    string prefix = ViewData.TemplateInfo.HtmlFieldPrefix;
+    prefix = prefix.Replace(".", "_");
+    bool showDays = ViewData["ShowDays"] == null || Convert.ToBoolean(ViewData["ShowDays"]);
+    var htmlAttributes = new Dictionary<string, object>();
+
+}
+
+@if (isRequired)
+{
+    @Html.TextBox(string.Empty, null,
+    new
+    {
+        @data_val = "true",
+        @data_val_daterequired = ViewBag.Message,
+        @data_val_daterequired_dayfield = prefix + "_Day",
+        @data_val_daterequired_monthfield = prefix + "_Month",
+        @data_val_daterequired_yearfield = prefix + "_Year",
+        @style = "position: absolute;left:-9999px;"
+    })
+}
+
+
+@if (System.Web.HttpContext.Current.Request.Browser["IsMobile"] == "True")
+{
+    htmlAttributes.Add("type", "date");
+    @Html.TextBox(ViewData.ModelMetadata.PropertyName, Model ?? null, htmlAttributes)
+    ;
+    
+}
+else
+{
+    <div class="row">
+        <div class="dateDropDown">
+            @if (showDays)
+            {
+                <div class="col-sm-4">
+                    <div>
+                        @Html.DropDownList("Day", Enumerable.Range(1, 31).Select(i => new SelectListItem
+                        {
+                            Value = i.ToString(),
+                            Text = i.ToString().PadLeft(2, '0'),
+                            Selected = (Model != null && Model.HasValue && i == Model.Value.Day),
+                        }), "-- Day --")
+                    </div>
+                </div>
+            }
+            else
+            {
+                @Html.Hidden("Day", "1")
+                ;
+            }
+
+
+            <div class="col-sm-4">
+                @Html.DropDownList("Month", Enumerable.Range(1, 12).Select(i => new SelectListItem
+            {
+                Value = i.ToString(),
+                Text = Thread.CurrentThread.CurrentUICulture.DateTimeFormat.GetMonthName(i),
+                Selected = (Model != null && Model.HasValue && i == Model.Value.Month),
+            }), "-- Month --")
+            </div>
+
+            <div class="col-sm-4">
+                @Html.DropDownList("Year", Enumerable.Range(DateTime.Now.Year - 100, 101).OrderByDescending(j => j.ToString()).Select(i => new SelectListItem
+            {
+                Value = i.ToString(),
+                Text = i.ToString(),
+                Selected = (Model != null && Model.HasValue && i == Model.Value.Year),
+            }), "-- Year --")
+            </div>
+        </div>
+
+    </div>
+}
+
+@Html.Section(
+    @<script type='text/javascript'>
+        $(document).ready(function () {
+            var prefix = '@ViewData.TemplateInfo.HtmlFieldPrefix';
+            prefix = prefix.replace(".", "_");
+            var element = $("[id^='" + prefix + "']");
+
+            element.change(function () {
+                $('#' + prefix).valid();
+            });
+
+        });
+    </script>, "scripts")

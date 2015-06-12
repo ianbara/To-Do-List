@@ -1,0 +1,16 @@
+﻿@using Pfg.Websites.ProvidentOnline.HtmlHelpers
+@model Boolean
+
+<label class="checkbox">
+    <input name="@(ViewData.ModelMetadata.PropertyName)_Submitted" type="hidden" value="true" />
+    @Html.BasicCheckBoxFor(() => Model, new Dictionary<string, object>(Html.GetUnobtrusiveValidationAttributes(@ViewData.ModelMetadata.PropertyName, @ViewData.ModelMetadata))
+        {
+            {"id", @ViewData.ModelMetadata.PropertyName},
+            {"name", @ViewData.ModelMetadata.PropertyName}
+        })
+    <span class="check"></span>
+    @if (!string.IsNullOrWhiteSpace(ViewData.ModelMetadata.Description))
+    {
+        <span class="text">@ViewData.ModelMetadata.Description</span>
+    }
+</label>

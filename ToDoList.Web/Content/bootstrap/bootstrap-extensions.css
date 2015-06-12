@@ -1,0 +1,8 @@
+﻿.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+.no-gutter-right-col {
+  padding-right: 0;
+}
+/*# sourceMappingURL=bootstrap-extensions.css.map */

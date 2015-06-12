@@ -1,0 +1,11 @@
+﻿@using Pfg.Websites.ProvidentOnline.Common
+@model string
+
+@if (System.Web.HttpContext.Current.Request.Browser["IsMobile"] == "True")
+{
+    @Html.TextBoxFor(m => m, new { type = "number" })
+}
+else
+{
+    @Html.TextBoxFor(m => m);
+}

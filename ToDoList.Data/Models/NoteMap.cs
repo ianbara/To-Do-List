@@ -9,10 +9,10 @@ namespace ToDoList.Data
 {
     public class NoteMap : EntityTypeConfiguration<Note>
     {
-        public NoteMap()
+          public NoteMap()
         {
             // Primary Key
-            this.HasKey(t => t.id);
+            this.HasKey(t => t.Id);
 
             // Properties
             this.Property(t => t.Name)
@@ -20,7 +20,7 @@ namespace ToDoList.Data
 
             // Table & Column Mappings
             this.ToTable("Note");
-            this.Property(t => t.id).HasColumnName("id");
+            this.Property(t => t.Id).HasColumnName("id");
             this.Property(t => t.Name).HasColumnName("Name");
         }
     }

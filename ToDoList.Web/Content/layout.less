@@ -1,0 +1,48 @@
+﻿@import '_constants.less';
+@import 'layout.less';
+ 
+footer {
+	line-height: 1.2em;
+    text-align: center;
+ 
+}
+footer section {
+	font-size: 90%;
+     background: #ccc;
+}
+footer nav ul {
+	list-style: none;
+	margin: 0 0 2em;
+	padding: 0;
+}
+footer nav li {
+	display: inline-block;
+	margin: 9px 0;
+}
+footer nav li~li {
+	border-left: 1px solid #b9b9b9;
+}
+footer nav a {
+	color: @standardFontColour;
+	font-weight: bold;
+	padding: 0.6em;
+}
+footer p {
+	margin: 0;
+	padding: 0;
+}
+footer .social a {
+    line-height: 3.5em;
+}
+footer .social .icon {
+    vertical-align: middle;
+}
+footer .social .text {
+    margin-left: 0.5em;
+}
+
+@media (min-width: @breakpointWidth4) {
+    footer {
+        text-align: center;
+    }
+}

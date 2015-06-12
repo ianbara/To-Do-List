@@ -1,0 +1,118 @@
+﻿.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.marg-t {
+  margin-top: 10px;
+}
+.marg-t-large {
+  margin-top: 20px;
+}
+.marg-l {
+  margin-left: 10px;
+}
+.marg-b {
+  margin-bottom: 10px;
+}
+.marg-r {
+  margin-right: 10px;
+}
+.marg-all {
+  margin: 10px;
+}
+.marg-none {
+  margin: 0px;
+}
+.pad-t {
+  padding-top: 10px;
+}
+.pad-l {
+  padding-left: 10px;
+}
+.pad-b {
+  padding-bottom: 10px;
+}
+.pad-r {
+  padding-right: 10px;
+}
+.pad-all {
+  padding: 10px;
+}
+.pad-none {
+  padding: 0;
+}
+/* Breakpoint 3 */
+@media (min-width: 750px) {
+  .breakpoint-visible.breakpoint-3 {
+    border: 0;
+    clip: auto;
+    height: auto;
+    margin: auto;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: auto;
+  }
+  .breakpoint-hidden.breakpoint-3 {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+/* Breakpoint 4 */
+@media (min-width: 890px) {
+  .breakpoint-visible.breakpoint-4 {
+    border: 0;
+    clip: auto;
+    height: auto;
+    margin: auto;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: auto;
+  }
+  .breakpoint-hidden.breakpoint-4 {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+/* Breakpoint 5 */
+@media (min-width: 1080px) {
+  .breakpoint-visible.breakpoint-5 {
+    border: 0;
+    clip: auto;
+    height: auto;
+    margin: auto;
+    overflow: visible;
+    padding: 0;
+    position: relative;
+    width: auto;
+  }
+  .breakpoint-hidden.breakpoint-5 {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+/*# sourceMappingURL=common.css.map */
