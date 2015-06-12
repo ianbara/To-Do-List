@@ -220,6 +220,32 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap\4-col-portfolio.css">
+      <DependentUpon>4-col-portfolio.less</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\bootstrap-extensions.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap\bootstrap.css" />
+    <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\common.css" />
+    <Content Include="Content\common.min.css" />
+    <Content Include="Content\elements\pills.css" />
+    <Content Include="Content\fonts.css" />
+    <Content Include="Content\fonts.min.css" />
+    <Content Include="Content\fonts\nbs-icons.dev.svg" />
+    <Content Include="Content\fonts\nbs-icons.svg" />
+    <Content Include="Content\fonts\raleway-bold-webfont.svg" />
+    <Content Include="Content\fonts\raleway-medium-webfont.svg" />
+    <Content Include="Content\fonts\raleway-regular-webfont.svg" />
+    <Content Include="Content\fonts\raleway-semibold-webfont.svg" />
+    <Content Include="Content\fonts\ultimapro-bold-webfont.svg" />
+    <Content Include="Content\form.css" />
+    <Content Include="Content\icons.css" />
+    <Content Include="Content\images\sprite.png" />
+    <Content Include="Content\images\sprite_2x.png" />
+    <Content Include="Content\layout.css" />
+    <Content Include="Content\normalize.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -274,9 +300,56 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\typography.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="51Degrees.mobi.config" />
+    <Content Include="Content\bootstrap\bootstrap-extensions.css.map" />
+    <Content Include="Content\bootstrap\bootstrap-extensions.less" />
+    <Content Include="Content\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap\bootstrap.css.map" />
+    <Content Include="Content\common.css.map" />
+    <Content Include="Content\common.less" />
+    <Content Include="Content\elements\pills.css.map" />
+    <Content Include="Content\elements\pills.less" />
+    <Content Include="Content\fonts.css.map" />
+    <Content Include="Content\fonts.less" />
+    <Content Include="Content\fonts\nbs-icons.eot" />
+    <Content Include="Content\fonts\nbs-icons.ttf" />
+    <Content Include="Content\fonts\nbs-icons.woff" />
+    <Content Include="Content\fonts\raleway-bold-webfont.eot" />
+    <Content Include="Content\fonts\raleway-bold-webfont.ttf" />
+    <Content Include="Content\fonts\raleway-bold-webfont.woff" />
+    <Content Include="Content\fonts\raleway-medium-webfont.eot" />
+    <Content Include="Content\fonts\raleway-medium-webfont.ttf" />
+    <Content Include="Content\fonts\raleway-medium-webfont.woff" />
+    <Content Include="Content\fonts\raleway-regular-webfont.eot" />
+    <Content Include="Content\fonts\raleway-regular-webfont.ttf" />
+    <Content Include="Content\fonts\raleway-regular-webfont.woff" />
+    <Content Include="Content\fonts\raleway-semibold-webfont.eot" />
+    <Content Include="Content\fonts\raleway-semibold-webfont.ttf" />
+    <Content Include="Content\fonts\raleway-semibold-webfont.woff" />
+    <Content Include="Content\fonts\ultimapro-bold-webfont.eot" />
+    <Content Include="Content\fonts\ultimapro-bold-webfont.ttf" />
+    <Content Include="Content\fonts\ultimapro-bold-webfont.woff" />
+    <Content Include="Content\form.css.map" />
+    <Content Include="Content\form.less" />
+    <Content Include="Content\icons.css.map" />
+    <Content Include="Content\icons.less" />
+    <Content Include="Content\layout.css.map" />
+    <Content Include="Content\layout.less" />
+    <Content Include="Content\normalize.css.map" />
+    <Content Include="Content\normalize.less" />
+    <Content Include="Content\site.css.map" />
+    <Content Include="Content\site.less" />
+    <Content Include="Content\typography.css.map" />
+    <Content Include="Content\typography.less" />
+    <Content Include="Content\_constants.less" />
+    <Content Include="Content\_mixins.less" />
+    <Content Include="Content\bootstrap\4-col-portfolio.less" />
+    <Content Include="Content\bootstrap\4-col-portfolio.css.map">
+      <DependentUpon>4-col-portfolio.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -347,6 +420,9 @@
     <Content Include="Views\Shared\EditorTemplates\Text.cshtml" />
     <Content Include="Views\Note\Edit.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTimeDropDown.cshtml" />
+    <Content Include="Views\Note\Grid.cshtml" />
+    <Content Include="Views\Note\_tableView.cshtml" />
+    <Content Include="Views\Note\_gridView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

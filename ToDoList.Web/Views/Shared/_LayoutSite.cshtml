@@ -30,6 +30,7 @@
     <link href="~/Content/typography.css" rel="stylesheet" />
     <link href="~/Content/layout.less" rel="stylesheet" />
     <link href="~/Content/icons.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/4-col-portfolio.css" rel="stylesheet"/>
 
 </head>
 
@@ -101,13 +102,8 @@
        
         </footer>
     </div> <!-- /container -->
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>

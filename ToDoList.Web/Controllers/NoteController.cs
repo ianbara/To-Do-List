@@ -60,5 +60,18 @@ namespace ToDoList.Web.Controllers
             return RedirectToAction("Index");
         }
 
+
+        public PartialViewResult TableView()
+        {
+            var notes = _noteService.GetAll();
+            return PartialView("_tableView", notes);
+        }
+
+        public PartialViewResult GridView()
+        {
+            var notes = _noteService.GetAll();
+            return PartialView("_gridView", notes);
+        }
+
     }
 }
