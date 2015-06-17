@@ -233,6 +233,11 @@
     <Content Include="Content\elements\pills.css" />
     <Content Include="Content\fonts.css" />
     <Content Include="Content\fonts.min.css" />
+    <Content Include="Content\fonts\bebasneue_bold-webfont.svg" />
+    <Content Include="Content\fonts\bebasneue_book-webfont.svg" />
+    <Content Include="Content\fonts\bebasneue_light-webfont.svg" />
+    <Content Include="Content\fonts\bebasneue_regular-webfont.svg" />
+    <Content Include="Content\fonts\bebasneue_thin-webfont.svg" />
     <Content Include="Content\fonts\nbs-icons.dev.svg" />
     <Content Include="Content\fonts\nbs-icons.svg" />
     <Content Include="Content\fonts\raleway-bold-webfont.svg" />
@@ -350,6 +355,26 @@
     <Content Include="Content\bootstrap\4-col-portfolio.css.map">
       <DependentUpon>4-col-portfolio.css</DependentUpon>
     </Content>
+    <Content Include="Content\fonts\bebasneue_bold-webfont.eot" />
+    <Content Include="Content\fonts\bebasneue_bold-webfont.ttf" />
+    <Content Include="Content\fonts\bebasneue_bold-webfont.woff" />
+    <Content Include="Content\fonts\bebasneue_bold-webfont.woff2" />
+    <Content Include="Content\fonts\bebasneue_book-webfont.eot" />
+    <Content Include="Content\fonts\bebasneue_book-webfont.ttf" />
+    <Content Include="Content\fonts\bebasneue_book-webfont.woff" />
+    <Content Include="Content\fonts\bebasneue_book-webfont.woff2" />
+    <Content Include="Content\fonts\bebasneue_light-webfont.eot" />
+    <Content Include="Content\fonts\bebasneue_light-webfont.ttf" />
+    <Content Include="Content\fonts\bebasneue_light-webfont.woff" />
+    <Content Include="Content\fonts\bebasneue_light-webfont.woff2" />
+    <Content Include="Content\fonts\bebasneue_regular-webfont.eot" />
+    <Content Include="Content\fonts\bebasneue_regular-webfont.ttf" />
+    <Content Include="Content\fonts\bebasneue_regular-webfont.woff" />
+    <Content Include="Content\fonts\bebasneue_regular-webfont.woff2" />
+    <Content Include="Content\fonts\bebasneue_thin-webfont.eot" />
+    <Content Include="Content\fonts\bebasneue_thin-webfont.ttf" />
+    <Content Include="Content\fonts\bebasneue_thin-webfont.woff" />
+    <Content Include="Content\fonts\bebasneue_thin-webfont.woff2" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -458,7 +483,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>61487</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61487/</IISUrl>
+          <IISUrl>http://localhost:8002</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
