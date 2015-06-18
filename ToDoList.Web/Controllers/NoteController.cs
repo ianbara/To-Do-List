@@ -60,6 +60,13 @@ namespace ToDoList.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Delete(int id)
+        {
+            _noteService.DeleteByID(id);
+
+            return RedirectToAction("Index");
+        }
+
 
         public PartialViewResult TableView()
         {

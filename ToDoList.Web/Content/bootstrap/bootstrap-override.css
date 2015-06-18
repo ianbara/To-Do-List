@@ -1,0 +1,28 @@
+﻿.navbar-inverse {
+  background-image: -webkit-linear-gradient(top, #41291d 0%, #41291d 100%);
+  background-image: -o-linear-gradient(top, #41291d 0%, #222222 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#41291d), to(#41291d));
+  background-image: linear-gradient(to bottom, #41291d 0%, #41291d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#41291d', endColorstr='#41291d', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  background-repeat: repeat-x;
+}
+.navbar-inverse {
+  background-color: #41291d;
+  border-color: #41291d;
+}
+table {
+  border-collapse: collapse;
+}
+td {
+  position: relative;
+}
+tr.strikeout td:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border-bottom: 1px solid #c0c0c0;
+  width: 100%;
+}
+/*# sourceMappingURL=bootstrap-override.css.map */

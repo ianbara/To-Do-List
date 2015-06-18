@@ -1,75 +1,87 @@
 ﻿@model ToDoList.Data.Note
 
 @{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutSite.cshtml";
 }
+
 <h2>Edit</h2>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <fieldset>
-                <legend>Note</legend>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
 
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.Reference)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.Reference)
-                </div>
+    <fieldset>
+        <legend>Note</legend>
 
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.SortOrder)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.SortOrder)
-                </div>
+        @Html.HiddenFor(model => model.Id)
 
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.Name)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.Name)
-                </div>
-
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.Details)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.Details)
-                </div>
-
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.StartDate)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.StartDate)
-                </div>
-
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.EndDate)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.EndDate)
-                </div>
-
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.AllDay)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.AllDay)
-                </div>
-
-                <div class="display-label">
-                    @Html.DisplayNameFor(model => model.Completed)
-                </div>
-                <div class="display-field">
-                    @Html.DisplayFor(model => model.Completed)
-                </div>
-            </fieldset>
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-                @Html.ActionLink("Back to List", "Index")
-            </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Reference)
         </div>
-    </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Reference)
+            @Html.ValidationMessageFor(model => model.Reference)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Details)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Details)
+            @Html.ValidationMessageFor(model => model.Details)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StartDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.StartDate)
+            @Html.ValidationMessageFor(model => model.StartDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EndDate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EndDate)
+            @Html.ValidationMessageFor(model => model.EndDate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AllDay)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AllDay)
+            @Html.ValidationMessageFor(model => model.AllDay)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Completed)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Completed)
+            @Html.ValidationMessageFor(model => model.Completed)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

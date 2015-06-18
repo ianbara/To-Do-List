@@ -22,14 +22,18 @@ namespace ToDoList.Data
             Id = id;
             SetDefaultValue();
         }
-
+        [Required]
         public int Id { get; private set; }
         public int Reference { get; set; }
         public int SortOrder { get; set; }
+
+        [Required]
         public string Name { get; set; }
 
         [DataType(DataType.MultilineText)]
         public string Details { get; set; }
+
+        [Required]
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public bool AllDay { get; set; }

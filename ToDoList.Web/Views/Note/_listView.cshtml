@@ -1,0 +1,23 @@
+﻿@model IEnumerable<ToDoList.Data.Note>
+
+@{
+    Layout = null;
+    ViewBag.Title = "Index";
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+
+<div  class="panel panel-default">
+    <div class="panel-heading">Test</div>
+    <ol class="list-group sortable">
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item">@item.Name</li>
+        }
+    </ol>
+</div>
+

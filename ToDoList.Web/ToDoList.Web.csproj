@@ -224,6 +224,9 @@
       <DependentUpon>4-col-portfolio.less</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap\bootstrap-extensions.css" />
+    <Content Include="Content\bootstrap\bootstrap-override.css">
+      <DependentUpon>bootstrap-override.less</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap\bootstrap-theme.css" />
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
@@ -375,6 +378,10 @@
     <Content Include="Content\fonts\bebasneue_thin-webfont.ttf" />
     <Content Include="Content\fonts\bebasneue_thin-webfont.woff" />
     <Content Include="Content\fonts\bebasneue_thin-webfont.woff2" />
+    <Content Include="Content\bootstrap\bootstrap-override.less" />
+    <Content Include="Content\bootstrap\bootstrap-override.css.map">
+      <DependentUpon>bootstrap-override.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -385,6 +392,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
@@ -443,11 +451,13 @@
     <Content Include="Views\Shared\EditorTemplates\Number.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Telephone.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Text.cshtml" />
-    <Content Include="Views\Note\Edit.cshtml" />
+    <Content Include="Views\Note\Details.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTimeDropDown.cshtml" />
     <Content Include="Views\Note\Grid.cshtml" />
     <Content Include="Views\Note\_tableView.cshtml" />
     <Content Include="Views\Note\_gridView.cshtml" />
+    <Content Include="Views\Note\Edit.cshtml" />
+    <Content Include="Views\Note\_listView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

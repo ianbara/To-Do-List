@@ -19,9 +19,9 @@ namespace ToDoList.Web
         protected void Application_Start()
         {
 
-            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ToDoListDbContext>());
-            var ctx = new ToDoListDbContext();
-            ctx.Database.Initialize(true);
+            //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<ToDoListDbContext>());
+            //var ctx = new ToDoListDbContext();
+            //ctx.Database.Initialize(true);
 
 
             AreaRegistration.RegisterAllAreas();

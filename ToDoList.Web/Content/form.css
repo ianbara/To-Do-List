@@ -92,7 +92,7 @@ select:focus,
 select:active,
 .banner .highlight-box select:focus,
 .banner .highlight-box select:active {
-  border-color: #d84000;
+  border-color: #444444;
   outline: 0;
   -webkit-box-shadow: 0 0 4px 0 rgba(216, 64, 0, 0.3);
   -moz-box-shadow: 0 0 4px 0 rgba(216, 64, 0, 0.3);
@@ -159,7 +159,7 @@ textarea.small {
 .radio input[type=radio]:active + .check,
 .banner .highlight-box .radio input[type=radio]:focus + .check,
 .banner .highlight-box .radio input[type=radio]:active + .check {
-  border-color: #d84000;
+  border-color: #444444;
   -webkit-box-shadow: 0 0 4px 0 rgba(216, 64, 0, 0.3);
   -moz-box-shadow: 0 0 4px 0 rgba(216, 64, 0, 0.3);
   box-shadow: 0 0 4px 0 rgba(216, 64, 0, 0.3);

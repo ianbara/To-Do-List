@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<ToDoList.Data.Note>
 
-<h1>Notes</h1>
+<h1>Tasks</h1>
 
 
 @Ajax.ActionLink("List", // <-- Text to display
@@ -27,15 +27,37 @@
                  })
 
 <div id="CustomerList">
-    @Html.Partial("_tableView", Model)
+    @Html.Partial("_listView", Model)
 </div>
 
-<script>
-    function onAjaxBegin() {
-        $("#CustomerList").hide();
-    }
 
-    function onAjaxComplete() {
-        $("#CustomerList").fadeIn(300);
-    }
+
+<ul id="sortable">
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+    <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+</ul>
+
+@section scripts
+{
+    <script>
+
+        $(function () {
+            $(".sortable").sortable();
+            $(".sortable").disableSelection();
+        });
+
+        function onAjaxBegin() {
+            $("#CustomerList").hide();
+        }
+
+        function onAjaxComplete() {
+            $("#CustomerList").fadeIn(300);
+        }
 </script>
+
+}

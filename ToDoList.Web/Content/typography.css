@@ -8,7 +8,7 @@ body {
   line-height: 1.4em;
 }
 a {
-  color: #d84000;
+  color: #444444;
   text-decoration: none;
 }
 a.plain {
@@ -22,7 +22,7 @@ a.plain {
   color: #444444;
 }
 .secondary-banner a {
-  color: #d84000;
+  color: #444444;
 }
 .tertiary-banner {
   color: #444444;
@@ -47,7 +47,7 @@ h6 {
 h1,
 h2,
 h3 {
-  color: #d84000;
+  color: #444444;
   font-family: 'Bebasnueue', Arial, Helvetica, sans-serif;
 }
 .banner h1,
@@ -89,7 +89,7 @@ h6 {
   font-weight: 500;
 }
 .banner .highlight-box h2 {
-  color: #d84000;
+  color: #444444;
   font-size: 1.2em;
 }
 ul.plain {
