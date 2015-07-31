@@ -7,6 +7,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using ToDoList.Data;
+using ToDoList.Data.Models;
 
 namespace ToDoList.Data
 {
@@ -33,11 +34,15 @@ namespace ToDoList.Data
         [DataType(DataType.MultilineText)]
         public string Details { get; set; }
 
+        public virtual Board Board { get; set; }
+
         [Required]
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public bool AllDay { get; set; }
         public bool Completed { get; set; }
+
+        public bool Priority { get; set; }
 
         private void SetDefaultValue()
         {
