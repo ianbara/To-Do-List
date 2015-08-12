@@ -1,7 +1,5 @@
 ﻿@model IEnumerable<ToDoList.Data.Note>
 
-<h1>Tasks</h1>
-
 
 @Ajax.ActionLink("List", // <-- Text to display
                  "TableView", // <-- Action Method Name
@@ -26,8 +24,13 @@
                      OnBegin = "onAjaxBegin"
                  })
 
+@Html.Partial("_TaskMenu")
+
+
 <div id="CustomerList">
-    @Html.Partial("_listView", Model)
+ 
+
+    @Html.Partial("_TableView", Model)
 </div>
 
 

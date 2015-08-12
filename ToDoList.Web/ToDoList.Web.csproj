@@ -387,6 +387,8 @@
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\selectboxit.js" />
     <Content Include="Mobile\Default.aspx" />
+    <Content Include="Scripts\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -458,6 +460,7 @@
     <Content Include="Views\Note\_gridView.cshtml" />
     <Content Include="Views\Note\Edit.cshtml" />
     <Content Include="Views\Note\_listView.cshtml" />
+    <Content Include="Views\Note\_TaskMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
