@@ -8,7 +8,7 @@ using ToDoList.Service;
 namespace ToDoList.Test
 {
     [TestClass]
-    public class NoteServiceTest
+    public class NoteTests
     {
         IUnitOfWork _uow;
         NoteService _noteService;
@@ -102,7 +102,7 @@ namespace ToDoList.Test
         public void NoteService_NewNote_Defaults_StartDate_To_Today()
         {
             //Arrange
-            var newNote = new Note(1) { Name = "New Note - Yesterday"};
+            var newNote = new Note(1) { Name = "New Note - Yesterday" };
             var expected = DateTime.Now;
 
             //Act

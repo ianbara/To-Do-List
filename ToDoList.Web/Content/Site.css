@@ -27,6 +27,20 @@
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Arrows';
+  src: url('fonts/arrrows-bold-webfont.eot');
+  src: url('fonts/arrrows-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/arrrows-bold-webfont.woff') format('woff'), url('fonts/arrrows-bold-webfont.ttf') format('truetype'), url('fonts/arrrows-bold-webfont.svg#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arrows';
+  src: url('fonts/arrrows-regular-webfont.eot');
+  src: url('fonts/arrrows-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/arrrows-regular-webfont.woff') format('woff'), url('fonts/arrrows-regular-webfont.ttf') format('truetype'), url('fonts/arrrows-regular-webfont.svg#icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 html,
 body {
   font-family: 'Bebasnueue', Arial, Helvetica, sans-serif;
@@ -154,5 +168,10 @@ p.box {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
+}
+.arrows {
+  font-family: 'Arrows', Arial, Helvetica, sans-serif;
+  color: gray;
+  font-size: 4em;
 }
 /*# sourceMappingURL=site.css.map */

@@ -1,28 +1,9 @@
 ﻿@model IEnumerable<ToDoList.Data.Note>
 
 
-@Ajax.ActionLink("List", // <-- Text to display
-                 "TableView", // <-- Action Method Name
-                 new AjaxOptions
-                 {
-                     UpdateTargetId = "CustomerList", // <-- DOM element ID to update
-                     InsertionMode = InsertionMode.Replace, // <-- Replace the content of DOM element
-                     HttpMethod = "GET", // <-- HTTP method,
-                     OnComplete = "onAjaxComplete",
-                     OnBegin = "onAjaxBegin"
-                     
-                 })
+<a href="/weekview">WeekView</a>
 
-@Ajax.ActionLink("Grid", // <-- Text to display
-                 "GridView", // <-- Action Method Name
-                 new AjaxOptions
-                 {
-                     UpdateTargetId = "CustomerList", // <-- DOM element ID to update
-                     InsertionMode = InsertionMode.Replace, // <-- Replace the content of DOM element
-                     HttpMethod = "GET", // <-- HTTP method
-                     OnComplete = "onAjaxComplete",
-                     OnBegin = "onAjaxBegin"
-                 })
+
 
 @Html.Partial("_TaskMenu")
 

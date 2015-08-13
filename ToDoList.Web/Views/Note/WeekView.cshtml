@@ -1,0 +1,170 @@
+﻿@{
+    ViewBag.Title = "WeekView";
+}
+<style>
+    
+</style>
+
+<section class="todo-section" id="calendar">
+    <nav class="column-list-nav column-list-left-nav">
+        <a class="nav-icon nav-button nav-left-button ss-left"></a>
+        <ul class="dropdown-nav">
+            <li>
+                <a class="nav-icon nav-jump-left-button nav-jump-button ss-jumpleft"></a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="column-list-nav column-list-right-nav">
+        <a class="nav-icon nav-button nav-right-button ss-right"></a>
+        <ul class="dropdown-nav">
+            <li>
+                <a class="nav-icon nav-jump-right-button nav-jump-button ss-jumpright"></a>
+            </li>
+        </ul>
+
+    </nav>
+    <div class="meanwhile-message">Meanwhile...</div>
+    <div class="column-list-scroll-container">
+        <div class="column-list" style="left: -1px;">
+            <section class="column calendar-column present" data-date="2015-08-13" data-id="null" id="column-2015-08-13" style="min-height: 206px;">
+                <h3 class="day webfont">Thursday</h3>
+                <h4 class="date">August 13, 2015</h4>
+                <div class="todo-list ui-sortable" style="min-height: 126px;">
+                    <ol class="recurring-todo-item-list"></ol>
+                    <ol class="todo-item-list">
+                        <li class="todo-item" data-id="c-0">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">Click this todo to mark it done</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                        <li class="todo-item" data-id="c-2">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">Hover this todo to reveal the rest of the text because it spans multiple lines</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                        <li class="todo-item" data-id="c-4">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">Drag this todo to the top or to another column</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                    </ol>
+                    <input class="new-todo-input" type="text">
+                </div>
+                <div class="todo-rules"></div>
+            </section><section class="column calendar-column future" data-date="2015-08-14" data-id="null" id="column-2015-08-14" style="min-height: 206px;">
+                <h3 class="day webfont">Friday</h3>
+                <h4 class="date">August 14, 2015</h4>
+                <div class="todo-list ui-sortable" style="min-height: 126px;">
+                    <ol class="recurring-todo-item-list"></ol>
+                    <ol class="todo-item-list">
+                        <li class="todo-item" data-id="c-6">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">Double click this todo to edit it</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                        <li class="todo-item" data-id="c-8">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">Edit <em>this</em> todo to see how you can <em>italicize</em> words</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                        <li class="todo-item" data-id="c-10">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">Edit <strong>this</strong> todo to see how you can <strong>embolden</strong> words</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                    </ol>
+                    <input class="new-todo-input" type="text">
+                </div>
+                <div class="todo-rules"></div>
+            </section><section class="column calendar-column future" data-date="2015-08-15" data-id="null" id="column-2015-08-15" style="min-height: 206px;">
+                <h3 class="day webfont">Saturday</h3>
+                <h4 class="date">August 15, 2015</h4>
+                <div class="todo-list ui-sortable" style="min-height: 126px;">
+                    <ol class="recurring-todo-item-list"></ol>
+                    <ol class="todo-item-list">
+                        <li class="todo-item" data-id="c-12">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">Edit <a href="http://teuxdeux.com">this</a> todo to see how you can link words</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                        <li class="todo-item" data-id="c-14">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html">or link the url <a href="http://teuxdeux.com">http://teuxdeux.com</a></p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                        <li class="todo-item" data-id="c-16">
+                            <div class="todo-text-wrapper">
+                                <div class="todo-text"><p class="todo-text-html"><a href="/video">Watch this video</a> to learn more</p></div>
+                            </div>
+                            <div class="todo-button-list">
+                                <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                                <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                                <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                            </div>
+                        </li>
+                    </ol>
+                    <input class="new-todo-input" type="text">
+                </div>
+                <div class="todo-rules"></div>
+            </section><section class="column calendar-column future" data-date="2015-08-16" data-id="null" id="column-2015-08-16" style="min-height: 206px;">
+                <h3 class="day webfont">Sunday</h3>
+                <h4 class="date">August 16, 2015</h4>
+                <div class="todo-list ui-sortable" style="min-height: 126px;">
+                    <ol class="recurring-todo-item-list"></ol>
+                    <ol class="todo-item-list"></ol>
+                    <input class="new-todo-input" type="text">
+                </div>
+                <div class="todo-rules"></div>
+            </section><section class="column calendar-column future" data-date="2015-08-17" data-id="null" id="column-2015-08-17" style="min-height: 206px;">
+                <h3 class="day webfont">Monday</h3>
+                <h4 class="date">August 17, 2015</h4>
+                <div class="todo-list ui-sortable" style="min-height: 126px;">
+                    <ol class="recurring-todo-item-list"></ol>
+                    <ol class="todo-item-list"></ol>
+                    <input class="new-todo-input" type="text">
+                </div>
+                <div class="todo-rules"></div>
+            </section>
+        </div>
+    </div>
+</section>

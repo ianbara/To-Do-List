@@ -231,11 +231,16 @@
     <Content Include="Content\bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap\bootstrap.css" />
     <Content Include="Content\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\calendar.css">
+      <DependentUpon>calendar.less</DependentUpon>
+    </Content>
     <Content Include="Content\common.css" />
     <Content Include="Content\common.min.css" />
     <Content Include="Content\elements\pills.css" />
     <Content Include="Content\fonts.css" />
     <Content Include="Content\fonts.min.css" />
+    <Content Include="Content\fonts\arrrows-bold-webfont.svg" />
+    <Content Include="Content\fonts\arrrows-regular-webfont.svg" />
     <Content Include="Content\fonts\bebasneue_bold-webfont.svg" />
     <Content Include="Content\fonts\bebasneue_book-webfont.svg" />
     <Content Include="Content\fonts\bebasneue_light-webfont.svg" />
@@ -252,6 +257,7 @@
     <Content Include="Content\icons.css" />
     <Content Include="Content\images\sprite.png" />
     <Content Include="Content\images\sprite_2x.png" />
+    <Content Include="Content\images\todo-item-list-bg.png" />
     <Content Include="Content\layout.css" />
     <Content Include="Content\normalize.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -382,6 +388,19 @@
     <Content Include="Content\bootstrap\bootstrap-override.css.map">
       <DependentUpon>bootstrap-override.css</DependentUpon>
     </Content>
+    <Content Include="Scripts\jquery-1.11.3.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.js" />
+    <Content Include="Scripts\jquery-1.11.3.min.map" />
+    <Content Include="Content\calendar.less" />
+    <Content Include="Content\calendar.css.map">
+      <DependentUpon>calendar.css</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\arrrows-bold-webfont.eot" />
+    <Content Include="Content\fonts\arrrows-bold-webfont.ttf" />
+    <Content Include="Content\fonts\arrrows-bold-webfont.woff" />
+    <Content Include="Content\fonts\arrrows-regular-webfont.eot" />
+    <Content Include="Content\fonts\arrrows-regular-webfont.ttf" />
+    <Content Include="Content\fonts\arrrows-regular-webfont.woff" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -389,9 +408,8 @@
     <Content Include="Mobile\Default.aspx" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-1.11.3-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.js" />
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\jquery-ui.js" />
@@ -461,6 +479,8 @@
     <Content Include="Views\Note\Edit.cshtml" />
     <Content Include="Views\Note\_listView.cshtml" />
     <Content Include="Views\Note\_TaskMenu.cshtml" />
+    <Content Include="Views\Note\WeekView.cshtml" />
+    <Content Include="Views\Home\Design.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

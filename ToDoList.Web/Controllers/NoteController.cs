@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 using ToDoList.Data;
 using ToDoList.Service;
 
@@ -78,6 +79,11 @@ namespace ToDoList.Web.Controllers
         {
             var notes = _noteService.GetAll();
             return PartialView("_gridView", notes);
+        }
+
+        public ActionResult WeekView()
+        {
+            return View();
         }
 
     }

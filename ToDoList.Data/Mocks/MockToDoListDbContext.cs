@@ -18,7 +18,7 @@ namespace ToDoList.Data.Infrastructure
             {
                 SortOrder = 1,
                 Name = "Make a Brew",
-                StartDate = DateTime.Now
+                StartDate = DateTime.Now,
             },
             new Note(2)
             {
@@ -35,5 +35,8 @@ namespace ToDoList.Data.Infrastructure
         };
             }
         }
+
+       
+
     }
 }

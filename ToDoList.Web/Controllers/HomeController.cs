@@ -28,5 +28,11 @@ namespace ToDoList.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Design()
+        {
+            return View();
+
+        }
     }
 }
