@@ -124,6 +124,10 @@ hgroup {
   right: 0px;
   padding-left: 18px;
 }
+.column-list-nav .ss-left:hover,
+.column-list-nav .ss-right:hover {
+  cursor: pointer;
+}
 .column-list-nav .ss-left:before,
 .column-list-nav .ss-left.right:after {
   content: 'V';
