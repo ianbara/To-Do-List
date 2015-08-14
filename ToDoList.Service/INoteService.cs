@@ -16,5 +16,7 @@ namespace ToDoList.Service
         void Update(Note note);
         void DeleteByID(int id);
         void ToggleComplete(int id);
+        List<DayColumn> GetInitialWeekView();
+        DayColumn NextDay(DateTime baseDay);
     }
 }

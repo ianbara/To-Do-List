@@ -112,5 +112,33 @@ namespace ToDoList.Test
             Assert.AreEqual(expected, actual);
         }
 
+        [TestMethod]
+        public void GetWeekView_Returns_5_Items()
+        {
+            //Arrange
+            var correctItemCount = 5;
+
+            //Act
+            var weekView = _noteService.GetInitialWeekView();
+
+
+            //Assert
+            Assert.IsTrue(weekView.Count == correctItemCount);
+        }
+
+        [TestMethod]
+        public void GetNextDay_Return_Next_DayColumn()
+        {
+            //Arrange
+            DateTime currentDate = Convert.ToDateTime("14/08/2014");
+            DateTime expectedDate = Convert.ToDateTime("15/08/2014");          
+
+            //Act
+            var resultDate = _noteService.NextDay(currentDate);
+
+            //Assert
+            Assert.AreEqual(expectedDate, resultDate.DataDate, "Incorrect Next Date");
+        }
+
     }
 }

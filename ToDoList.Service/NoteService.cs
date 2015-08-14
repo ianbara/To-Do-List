@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using ToDoList.Data;
@@ -19,7 +21,6 @@ namespace ToDoList.Service
     public class NoteService : INoteService
     {
         private IUnitOfWork _uow;
-
         private IRepository<Note> _Note;
 
         public NoteService(IUnitOfWork uow)
@@ -86,5 +87,44 @@ namespace ToDoList.Service
                 throw new Exception("Failure completing note", ex);
             }
         }
+
+
+        public DayColumn NextDay(DateTime baseDay)
+        {
+            return new DayColumn() { DataDate = baseDay.AddDays(1) };
+        }
+
+        public List<DayColumn> GetInitialWeekView()
+        {
+            var weekView = new List<DayColumn>
+            {
+                new DayColumn() {DataDate = DateTime.Now.AddDays(-2)},
+                new DayColumn() {DataDate = DateTime.Now.AddDays(-1)},
+                new DayColumn() {DataDate = DateTime.Now},
+                new DayColumn() {DataDate = DateTime.Now.AddDays(1)},
+                new DayColumn() {DataDate = DateTime.Now.AddDays(2)}
+            };
+
+            return weekView;
+        }
+
+    }
+
+    public class DayColumn
+    {
+        public DayColumn()
+        {
+            Notes = new List<Note>();
+        }
+
+        public DateTime DataDate { get; set; }
+        public string Day { get { return DataDate.DayOfWeek.ToString(); } }
+
+        public string Date { get
+        {
+            return string.Format("{0} {1}, {2}", DataDate.Month, DataDate.Day, DataDate.Year);
+        }}
+
+        public List<Note> Notes { get; set; }
     }
 }

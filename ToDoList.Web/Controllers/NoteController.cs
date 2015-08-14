@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
@@ -83,8 +84,24 @@ namespace ToDoList.Web.Controllers
 
         public ActionResult WeekView()
         {
-            return View();
+            var weeklyView = _noteService.GetInitialWeekView();
+            return View(weeklyView);
         }
+
+        //public PartialViewResult GetNextDay(string baseDay)
+        //{
+        //    var dateBaseDay = new DateTime();
+        //    if (string.IsNullOrWhiteSpace(baseDay))
+        //    {
+        //        dateBaseDay = DateTime.Now;
+        //    }
+        //    dateBaseDay = DateTime.Parse(baseDay);
+
+
+        //    var nextDay = _noteService.NextDay(baseDay);
+        //    return PartialView("_dayColumn", nextDay);
+
+        //}
 
     }
 }

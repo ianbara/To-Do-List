@@ -484,6 +484,7 @@
     <Content Include="Views\Note\_TaskMenu.cshtml" />
     <Content Include="Views\Note\WeekView.cshtml" />
     <Content Include="Views\Home\Design.cshtml" />
+    <Content Include="Views\Note\_DayColumn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

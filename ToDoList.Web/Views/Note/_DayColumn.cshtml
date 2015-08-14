@@ -1,0 +1,24 @@
+﻿@model ToDoList.Service.DayColumn
+
+<section class="column calendar-column present" data-date="2015-08-13" data-id="null" id="column-2015-08-13" style="min-height: 206px;">
+    <h3 class="day webfont">@Model.Day</h3>
+    <h4 class="date">@Model.Date</h4>
+    <div class="todo-list ui-sortable" style="min-height: 126px;">
+        <ol class="recurring-todo-item-list"></ol>
+        <ol class="todo-item-list">
+            <li class="todo-item" data-id="note-id">
+                <div class="todo-text-wrapper">
+                    <div class="todo-text"><p class="todo-text-html">Click this todo to mark it done</p></div>
+                </div>
+                <div class="todo-button-list">
+                    <a class="todo-button todo-recurring-button ss-repeat" tabindex="-1"></a>
+                    <a class="todo-button todo-edit-button ss-write" tabindex="-1"></a>
+                    <a class="todo-button todo-destroy-button ss-delete" tabindex="-1"></a>
+                </div>
+            </li>
+
+        </ol>
+        <input class="new-todo-input" type="text">
+    </div>
+    <div class="todo-rules"></div>
+</section>
