@@ -234,6 +234,9 @@
     <Content Include="Content\calendar.css">
       <DependentUpon>calendar.less</DependentUpon>
     </Content>
+    <Content Include="Content\calendar.min.css">
+      <DependentUpon>calendar.css</DependentUpon>
+    </Content>
     <Content Include="Content\common.css" />
     <Content Include="Content\common.min.css" />
     <Content Include="Content\elements\pills.css" />
