@@ -1,3 +1,5 @@
+using ToDoList.Data.Mocks.TestData;
+
 namespace ToDoList.Data.Migrations
 {
     using System;
@@ -10,12 +12,23 @@ namespace ToDoList.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = false; 
+            AutomaticMigrationDataLossAllowed = true; 
             ContextKey = "ToDoList.Data.ToDoListDbContext";
         }
 
         protected override void Seed(ToDoList.Data.ToDoListDbContext context)
         {
+
+            //var notes = TestData.GetTestNotes();
+            //var boards = TestData.GetTestBoards();
+
+            //notes.ForEach(s => context.Notes.Add(s));
+            //context.SaveChanges();
+
+            //boards.ForEach(s => context.Boards.Add(s));
+            //context.SaveChanges();
+
+            
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 

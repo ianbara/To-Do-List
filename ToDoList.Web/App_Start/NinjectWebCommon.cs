@@ -70,6 +70,7 @@ namespace ToDoList.Web.App_Start
             kernel.Bind<IUnitOfWork>().To<UnitOfWork<ToDoListDbContext>>();
             kernel.Bind<IRepository<Note>>().To<Repository<Note>>();
             kernel.Bind<INoteService>().To<NoteService>();
+            kernel.Bind<IBoardService>().To<BoardService>();
         }
     }
 }

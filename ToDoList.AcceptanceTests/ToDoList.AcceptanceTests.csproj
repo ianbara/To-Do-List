@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF0E5173-BD21-4F42-8CC9-1588426D84C8}</ProjectGuid>
+    <ProjectGuid>{4B40B6EE-2F19-45AE-BDD6-BF5727F68094}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ToDoList.Test</RootNamespace>
-    <AssemblyName>ToDoList.Test</AssemblyName>
+    <RootNamespace>ToDoList.AcceptanceTests</RootNamespace>
+    <AssemblyName>ToDoList.AcceptanceTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -36,9 +36,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1507.0118\lib\net40\Moq.dll</HintPath>
+      <HintPath>..\packages\Moq.4.2.1510.2205\lib\net40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -53,22 +59,36 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BoardServiceTests.cs" />
-    <Compile Include="NoteServiceTests.cs" />
+    <Compile Include="CreateBoard.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateBoard.feature</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNote.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateNote.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\CreateBoardSteps.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ToDoList.Data\ToDoList.Data.csproj">
-      <Project>{27b098a0-4dc5-4e46-9d4d-73ebbb62027a}</Project>
-      <Name>ToDoList.Data</Name>
-    </ProjectReference>
+    <None Include="App.config" />
+    <None Include="CreateBoard.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateBoard.feature.cs</LastGenOutput>
+    </None>
+    <None Include="CreateNote.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateNote.feature.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\ToDoList.Service\ToDoList.Service.csproj">
       <Project>{f125bca9-9aed-4bec-b086-f5c4fe737a26}</Project>
       <Name>ToDoList.Service</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -11,6 +11,7 @@ namespace ToDoList.Service
     public interface INoteService
     {
         IEnumerable<Note> GetAll();
+        IEnumerable<Note> GetNotesForBoard(int boardId);
         Note GetByID(int id);
         void Create(Note note);
         void Update(Note note);

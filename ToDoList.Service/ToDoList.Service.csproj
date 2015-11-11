@@ -47,9 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="INoteService.cs" />
+    <Compile Include="DayColumn.cs" />
+    <Compile Include="Interfaces\IBoardService.cs" />
+    <Compile Include="Interfaces\INoteService.cs" />
     <Compile Include="NoteHelper.cs" />
-    <Compile Include="NoteService.cs" />
+    <Compile Include="Implementations\BoardService.cs" />
+    <Compile Include="Implementations\NoteService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

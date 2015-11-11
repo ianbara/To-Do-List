@@ -21,9 +21,20 @@ namespace ToDoList.Web.Controllers
         }
 
 
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            var notes = _noteService.GetAll();
+            var notes = new List<Note>();
+
+            if (id == null)
+            {
+                notes = _noteService.GetAll().ToList();
+            }
+            else
+            {
+                var boardId = Convert.ToInt32(id);
+                notes = _noteService.GetNotesForBoard(boardId).ToList();
+            }
+
             return View(notes);
         }
 
@@ -88,20 +99,23 @@ namespace ToDoList.Web.Controllers
             return View(weeklyView);
         }
 
-        //public PartialViewResult GetNextDay(string baseDay)
-        //{
-        //    var dateBaseDay = new DateTime();
-        //    if (string.IsNullOrWhiteSpace(baseDay))
-        //    {
-        //        dateBaseDay = DateTime.Now;
-        //    }
-        //    dateBaseDay = DateTime.Parse(baseDay);
+        public PartialViewResult GetNextDay(string baseDate)
+        {
+
+            DateTime dt;
+
+            if (DateTime.TryParse(baseDate, out dt))
+            {
+                var nextDay = _noteService.NextDay(dt);
+                return PartialView("_dayColumn", nextDay);
+            }
+            else
+            {
+                return PartialView("_Error", "The value passed in date isn't a date value.");
+            }
 
 
-        //    var nextDay = _noteService.NextDay(baseDay);
-        //    return PartialView("_dayColumn", nextDay);
-
-        //}
+        }
 
     }
 }

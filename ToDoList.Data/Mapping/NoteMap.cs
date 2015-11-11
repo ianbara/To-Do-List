@@ -28,7 +28,11 @@ namespace ToDoList.Data
             this.Property(t => t.Reference).HasColumnName("Reference");
             this.Property(t => t.StartDate).HasColumnName("StartDate");
             this.Property(t => t.EndDate).HasColumnName("EndDate");
+            this.Property(t => t.Priority).HasColumnName("Priority");
             this.Property(t => t.SortOrder).HasColumnName("SortOrder");
+
+
+              
         }
     }
 }

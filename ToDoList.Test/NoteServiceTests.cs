@@ -34,7 +34,7 @@ namespace ToDoList.Test
         }
 
         [TestMethod]
-        public void NoteSerivice_Can_Delete_Note_MakeABrew()
+        public void NoteSerivice_Can_Delete_Note()
         {
             try
             {

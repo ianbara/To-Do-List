@@ -34,6 +34,11 @@ namespace ToDoList.Service
             return _Note.GetAll();
         }
 
+        public IEnumerable<Note> GetNotesForBoard(int boardId)
+        {
+            return _Note.GetAll().Where(b => b.BoardId == boardId);
+        }
+
         public Note GetByID(int id)
         {
             try
@@ -110,21 +115,5 @@ namespace ToDoList.Service
 
     }
 
-    public class DayColumn
-    {
-        public DayColumn()
-        {
-            Notes = new List<Note>();
-        }
-
-        public DateTime DataDate { get; set; }
-        public string Day { get { return DataDate.DayOfWeek.ToString(); } }
-
-        public string Date { get
-        {
-            return string.Format("{0} {1}, {2}", DataDate.Month, DataDate.Day, DataDate.Year);
-        }}
-
-        public List<Note> Notes { get; set; }
-    }
+   
 }

@@ -1,6 +1,6 @@
 ﻿@model ToDoList.Service.DayColumn
 
-<section class="column calendar-column present" data-date="2015-08-13" data-id="null" id="column-2015-08-13" style="min-height: 206px;">
+<section class="column calendar-column @Model.Present" data-date="@Model.DataDate" data-id="null" id="column-@Model.DataDate" style="min-height: 206px;">
     <h3 class="day webfont">@Model.Day</h3>
     <h4 class="date">@Model.Date</h4>
     <div class="todo-list ui-sortable" style="min-height: 126px;">

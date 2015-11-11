@@ -19,6 +19,7 @@ namespace ToDoList.Data.Models
 
         public int Id { get; set; }
         public string Name { get; set; }
+        public bool Completed { get; set; }
 
         public virtual ICollection<Note> NoteList { get; set; }
     }

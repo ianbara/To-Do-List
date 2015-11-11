@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Security.Policy;
@@ -23,6 +24,7 @@ namespace ToDoList.Data
             Id = id;
             SetDefaultValue();
         }
+
         [Required]
         public int Id { get; private set; }
         public int Reference { get; set; }
@@ -34,6 +36,9 @@ namespace ToDoList.Data
         [DataType(DataType.MultilineText)]
         public string Details { get; set; }
 
+        public int BoardId { get; set; }
+
+        [ForeignKey("BoardId")]
         public virtual Board Board { get; set; }
 
         [Required]
