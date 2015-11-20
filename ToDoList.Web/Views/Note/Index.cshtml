@@ -1,16 +1,12 @@
 ﻿@model IEnumerable<ToDoList.Data.Note>
 
 
-<a href="/weekview">WeekView</a>
-
-
+<h1>@ViewBag.PageTitle</h1>
 
 @Html.Partial("_TaskMenu")
 
 
 <div id="CustomerList">
- 
-
     @Html.Partial("_TableView", Model)
 </div>
 

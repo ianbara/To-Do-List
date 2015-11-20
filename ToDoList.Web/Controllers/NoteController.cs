@@ -13,16 +13,19 @@ namespace ToDoList.Web.Controllers
     public class NoteController : Controller
     {
         private INoteService _noteService;
+        private IBoardService _boardService;
 
 
-        public NoteController(INoteService noteService)
+        public NoteController(INoteService noteService, IBoardService boardService)
         {
             _noteService = noteService;
+            _boardService = boardService;
         }
 
 
         public ActionResult Index(int? id)
         {
+            ViewBag.PageTitle = "Notes";
             var notes = new List<Note>();
 
             if (id == null)
@@ -40,6 +43,7 @@ namespace ToDoList.Web.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.BoardList = new SelectList(_boardService.GetAll(), "Id", "Name");
             return View(new Note());
         }
 

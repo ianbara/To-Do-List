@@ -1,4 +1,4 @@
-﻿Feature: CreateBoard
+﻿Feature: CreateNote
 	When I visit the home page
 	As a user
 	I want to be told to create a note if no notes exists

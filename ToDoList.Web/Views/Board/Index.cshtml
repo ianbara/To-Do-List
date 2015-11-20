@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ToDoList.Data.Models.Board>
+
+
+<h1>@ViewBag.PageTitle</h1>
+
+@Html.Partial("_TaskMenu")
+
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    @foreach (var board in Model)
+    {
+        <tr>
+            <td>@board.Name</td>
+            <td>@Html.ActionLink("Edit", "Edit", new { board = board.Id })</td>
+        </tr>
+    }
+</table>
+
+
